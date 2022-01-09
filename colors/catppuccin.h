@@ -1,0 +1,19 @@
+/* https://github.com/joshdick/onedark.vim */
+static char foreground[] 		= "#DADAE8";
+static char background[]    = "#1E1E28";
+static char color0[] 				= "#6E6C7E";
+static char color8[]        = "#6E6C7E";
+static char color1[]        = "#E38C8F";
+static char color9[]        = "#E38C8F";
+static char color2[]        = "#B1E3AD";
+static char color10[]       = "#B1E3AD";
+static char color3[]        = "#EBDDAA";
+static char color11[]       = "#EBDDAA";
+static char color4[]        = "#A4B9EF";
+static char color12[]       = "#A4B9EF";
+static char color5[]        = "#C6AAE8";
+static char color13[]       = "#C6AAE8";
+static char color6[]        = "#E5B4E2";
+static char color14[]       = "#E5B4E2";
+static char color7[]        = "#DADAE8";
+static char color15[]       = "#DADAE8";

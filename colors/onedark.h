@@ -1,6 +1,6 @@
 /* https://github.com/joshdick/onedark.vim */
 static char foreground[]    = "#ABB2BF";
-static char background[]    = "#282C34";
+static char background[]    = "#1e2127";
 static char color0[]        = "#2C323C";
 static char color8[]        = "#3E4452";
 static char color1[]        = "#E06C75";

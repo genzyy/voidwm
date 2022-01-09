@@ -2,7 +2,7 @@
 
 /* --------------- settings -------------- */
 static const char *fonts[]      = { "JetBrainsMono Nerd Font:style=medium:size=10", "monospace:size=10" };
-static unsigned int borderpx    = 0;        /* border pixel of windows */
+static unsigned int borderpx    = 2;        /* border pixel of windows */
 static unsigned int snap        = 10;       /* snap pixel */
 static int swallowfloating      = 0;        /* 1 means swallow floating windows by default */
 static const float mfact        = 0.50;     /* factor of master area size [0.05..0.95] */
@@ -18,17 +18,17 @@ static unsigned int gappoh      = 10;       /* horiz outer gap between windows a
 static unsigned int gappov      = 10;       /* vert outer gap between windows and screen edge */
 
 /* ----------------- bar ----------------- */
-#define BARHEIGHT_STR           "28"        /* dmenu_run's -h value, match with barheight below */
-static int barheight            = 28;       /* 0 means dwm will calculate bar height wrt font */
+#define BARHEIGHT_STR           "27"        /* dmenu_run's -h value, match with barheight below */
+static int barheight            = 27;       /* 0 means dwm will calculate bar height wrt font */
 static int showbar              = 1;        /* 0 means no bar */
 static int topbar               = 1;        /* 0 means bottom bar */
 
 /* ------------- colorscheme ------------- */
-#include "colors/night_owl.h"
+#include "colors/amarena.h"
 static char *colors[][3]        = {
 	/*               fg             bg              border  */
 	[SchemeNorm] = { foreground,    background,     background  },
-	[SchemeSel]  = { color6,        background,     color6      }, // default is color6
+	[SchemeSel]  = { color6,        background,     color6      },
 	[SchemeUrg]  = { color9,        background,     color9      },
 };
 
@@ -58,7 +58,7 @@ static const unsigned int ulinevoffset  = 0;     /* how far above the bottom of 
 /* --------------- defaults -------------- */
 #define APP_BROWSER             "firefox"
 #define APP_BROWSER_            "firefox --private-window"
-#define APP_MENU                "dmenu_run -b"
+#define APP_MENU                "dmenu_run"
 #define APP_TERMINAL            "alacritty"
 #define CLASS_TERMINAL          "Alacritty"
 
@@ -174,8 +174,7 @@ static const char vol_mute[]    =  "pactl set-sink-mute 0 toggle; kill -44 $(pid
 static Key keys[]               = {
 	/* modifier                     key         function        argument */
 	{ MODKEY,                       XK_Return,  spawn,          {.v = termcmd } },
-	{ MODKEY|ShiftMask,             XK_Return,  spawn,          SHCMD("kitty") },
-	{ MODKEY,                       XK_d,       spawn,          SHCMD("dmenu_run -b") },
+	{ MODKEY,                       XK_d,       spawn,          {.v = menucmd } },
 	{ MODKEY,                       XK_q,       xrdb,           {.v = NULL    } },
 	{ MODKEY|ShiftMask,             XK_q,       quit,           {1} },
 	{ MODKEY|ControlMask,           XK_q,       quit,           {0} },
